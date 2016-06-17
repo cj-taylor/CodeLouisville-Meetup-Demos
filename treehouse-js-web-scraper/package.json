@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "treehouse-js-web-scraper-demo",
+  "version": "1.0.0",
+  "description": "Manually checking Treehouse for updates to the course can be tedious and time consuming so let's automate that with web scraping!",
+  "main": "app.js",
+  "dependencies": {
+    "scraperjs": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node app.js"
+  },
+  "author": "https://github.com/cj-taylor",
+  "repository": "https://github.com/cj-taylor/CodeLouisville-Meetup-Demos",
+  "license": "MIT"
+}
