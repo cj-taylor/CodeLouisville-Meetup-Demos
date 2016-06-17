@@ -11,7 +11,7 @@ Manually checking Treehouse for updates to the course can be tedious and time co
 ## Using this 
 - via terminal/cmd
 - `git clone https://github.com/cj-taylor/CodeLouisville-Meetup-Demos.git`
-- `cd js-web-scraper`
+- `cd treehouse-js-web-scraper`
 - `npm install`
 - `npm run-script run`
 
