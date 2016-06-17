@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "treehouse-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "scraperjs": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CJ Taylor",
+  "license": "MIT"
+}
