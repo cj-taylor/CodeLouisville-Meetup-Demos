@@ -24,7 +24,7 @@ Manually checking Treehouse for updates to the course can be tedious and time co
 ```
 [4:35:24] cj :: CJ-MBP  ➜  github/CodeLouisville-Meetup-Demos/js-web-scraper ‹master*› » npm run-script run
 
-> treehouse-scraper@1.0.0 run /Users/cj/proj/scm/github/CodeLouisville-Meetup-Demos/js-web-scraper
+> treehouse-js-web-scraper-demo@1.0.0 run /Users/cj/proj/scm/github/CodeLouisville-Meetup-Demos/treehouse-js-web-scraper
 > node app.js
 
 { id: 0, name: 'JavaScript Basics', estimate: '6 hours' }
