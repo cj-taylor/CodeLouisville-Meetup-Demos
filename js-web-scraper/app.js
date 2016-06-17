@@ -15,3 +15,19 @@ var selectors = {
         estimate: '.card-estimate'
     }
 };
+
+function ScrapeSelector(url, container, selectors) {
+    sjs.StaticScraper.create(url)
+        .scrape(function($) {
+            return $(container).map(function() {
+                return $(this).text();
+            }).get().filter(function(elm) {
+                return elm != 'More';
+            });
+        })
+        .then(function(results) {
+            results.forEach(function(elm) {
+                console.log(elm);
+            });
+        });
+}
