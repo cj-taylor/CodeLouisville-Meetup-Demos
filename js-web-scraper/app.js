@@ -31,3 +31,5 @@ function ScrapeSelector(url, container, selectors) {
             });
         });
 }
+
+ScrapeSelector(options.track.URL, selectors.track.name);
