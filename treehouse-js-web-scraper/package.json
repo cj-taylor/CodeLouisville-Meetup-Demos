@@ -11,8 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node src/app.js"
+    "test": "npm run test-mocha",
+    "run": "node src/app.js",
+    "test-mocha": "mocha -R Spec ./test/"
   },
   "author": "https://github.com/cj-taylor",
   "repository": "https://github.com/cj-taylor/CodeLouisville-Meetup-Demos",
