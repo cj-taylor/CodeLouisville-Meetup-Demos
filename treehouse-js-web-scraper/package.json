@@ -13,7 +13,7 @@
   "scripts": {
     "test": "npm run test-mocha",
     "run": "node src/app.js",
-    "test-mocha": "mocha -R Spec ./test/"
+    "test-mocha": "mocha --recursive ./test/"
   },
   "author": "https://github.com/cj-taylor",
   "repository": "https://github.com/cj-taylor/CodeLouisville-Meetup-Demos",
