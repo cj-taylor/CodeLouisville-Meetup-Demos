@@ -1,4 +1,5 @@
-var sjs = require('scraperjs');
+var sjs = require('scraperjs'),
+    jsonAccessor = require('./JsonAccessor');
 
 var options = {
     track : {
@@ -22,33 +23,9 @@ var objPath = {
     trackName :  "children.1.children.5.children.0.data"
 };
 
-// http://stackoverflow.com/questions/6491463/accessing-nested-javascript-objects-with-string-key
-function getProperty(obj, prop) {
-    var prop = prop.valueOf();
-    var parts = prop.split('.');
-
-    if (Array.isArray(parts)) {
-        var last = parts.pop(),
-        l = parts.length,
-        i = 1,
-        current = parts[0];
-
-        while((obj = obj[current]) && obj !== undefined && i < l) {
-            current = parts[i];
-            i++;
-        }
-
-        if(obj) {
-            return obj[last];
-        }
-    } else {
-        throw 'parts is not valid array';
-    }
-};
-
 function getTrackMetadata(index, obj) {
-    var estimate = getProperty(obj, objPath.estimate) || getProperty(obj, objPath.estimateFallback);
-    var trackName =  getProperty(obj, objPath.trackName);
+    var estimate = jsonAccessor.getPropertyValue(obj, objPath.estimate) || jsonAccessor.getPropertyValue(obj, objPath.estimateFallback);
+    var trackName =  jsonAccessor.getPropertyValue(obj, objPath.trackName);
 
     return {
         id: index,
