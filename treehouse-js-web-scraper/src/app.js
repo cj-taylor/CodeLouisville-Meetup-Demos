@@ -1,8 +1,9 @@
 var sjs = require('scraperjs'),
-    jsonAccessor = require('./JsonAccessor');
+    jsonAccessor = require('./JsonAccessor'),
+    TrackOperations = require('./Treehouse/TrackOperations');
 
 var options = {
-    track : {
+    track: {
         URL: 'https://teamtreehouse.com/tracks/full-stack-javascript'
     }
 };
@@ -14,41 +15,29 @@ var selectors = {
     trackModule: {
         container: '.card'
     },
-    
+
 };
 
 var objPath = {
     estimate: "children.1.children.1.children.5.children.0.data",
     estimateFallback: "children.1.children.1.children.3.children.0.data", // indices: 6, 8, 12
-    trackName :  "children.1.children.5.children.0.data"
-};
-
-function getTrackMetadata(index, obj) {
-    var estimate = jsonAccessor.getPropertyValue(obj, objPath.estimate) || jsonAccessor.getPropertyValue(obj, objPath.estimateFallback);
-    var trackName =  jsonAccessor.getPropertyValue(obj, objPath.trackName);
-
-    return {
-        id: index,
-        name: trackName,
-        estimate: estimate
-    };
+    trackName: "children.1.children.5.children.0.data"
 };
 
 function log(results) {
-    for (var i = 0; i < results.length; i++)
-    {
+    for (var i = 0; i < results.length; i++) {
         console.log(results[i]);
     }
 };
 
 function ScrapeSelector(url, container, selectors) {
     sjs.StaticScraper.create(url)
-        .scrape(function($) {
-            return $(container).map(function(index, track) {
-                return getTrackMetadata(index, track);
+        .scrape(function ($) {
+            return $(container).map(function (index, track) {
+                return TrackOperations.getTrackMetadata(index, track, objPath);
             });
         })
-        .then(function(results) {
+        .then(function (results) {
             log(results);
         });
 };
