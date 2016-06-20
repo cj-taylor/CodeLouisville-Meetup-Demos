@@ -14,11 +14,10 @@ var selectors = {
     },
     trackModule: {
         container: '.card'
-    },
-
+    }
 };
 
-var objPath = {
+var pathsToData = {
     estimate: "children.1.children.1.children.5.children.0.data",
     estimateFallback: "children.1.children.1.children.3.children.0.data", // indices: 6, 8, 12
     trackName: "children.1.children.5.children.0.data"
@@ -34,7 +33,7 @@ function ScrapeSelector(url, container, selectors) {
     sjs.StaticScraper.create(url)
         .scrape(function ($) {
             return $(container).map(function (index, track) {
-                return TrackOperations.getTrackMetadata(index, track, objPath);
+                return TrackOperations.getTrackMetadata(index, track, pathsToData);
             });
         })
         .then(function (results) {

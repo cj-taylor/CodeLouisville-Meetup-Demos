@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "treehouse-js-web-scraper",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/js-web-scraper/app.js",
+            "program": "${workspaceRoot}/treehouse-js-web-scraper/src/app.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
