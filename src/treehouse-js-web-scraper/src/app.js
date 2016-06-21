@@ -6,7 +6,7 @@ var options = {
     track: {
         URL: 'https://teamtreehouse.com/tracks/full-stack-javascript'
     }
-};
+}
 
 var selectors = {
     track: {
