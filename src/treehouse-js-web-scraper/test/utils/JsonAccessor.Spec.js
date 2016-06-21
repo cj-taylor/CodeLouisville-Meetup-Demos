@@ -1,7 +1,9 @@
 var expect = require('expect'),
     jsonAccessor = require('src/utils/JsonAccessor'); 
 
-const { describe, it, beforeEach } = require('mocha');
+var describe = require('mocha').describe,
+    beforeEach = require('mocha').beforeEach,
+    it = require('mocha').it;
 
 describe('JsonAccessor', function () {
     var testObject;
