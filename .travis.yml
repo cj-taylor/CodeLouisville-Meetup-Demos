@@ -16,4 +16,5 @@ script:
   - npm run test 
   - npm run test-travis
 # Send coverage data to Coveralls
-after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+after_script: 
+  - "cat ./src/treehouse-js-web-scraper/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
