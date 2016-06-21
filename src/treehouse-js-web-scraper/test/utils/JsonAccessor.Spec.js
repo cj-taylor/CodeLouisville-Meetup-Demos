@@ -1,5 +1,5 @@
 var expect = require('expect'),
-    jsonAccessor = require('../../src/utils/JsonAccessor');
+    jsonAccessor = require('../../src/utils/JsonAccessor'); // TODO: get rid of relative routing somehow (symlink?)
 
 const { describe, it, beforeEach } = require('mocha');
 
