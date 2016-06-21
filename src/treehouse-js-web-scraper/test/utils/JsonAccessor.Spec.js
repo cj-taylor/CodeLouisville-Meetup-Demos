@@ -1,15 +1,16 @@
 var expect = require('expect'),
-    jsonAccessor = require('../src/JsonAccessor');
+    jsonAccessor = require('../../src/utils/JsonAccessor');
 
-var testObject;
+const { describe, it, beforeEach } = require('mocha');
 
 describe('JsonAccessor', function () {
+    var testObject;
     
     beforeEach(function (done) {
         testObject = {
-            nonNestedKey: "nonNestedKeyValue",
+            nonNestedKey: 'nonNestedKeyValue',
             nestedKey: {
-                deeplyNestedKey: "deeplyNestedKeyValue"
+                deeplyNestedKey: 'deeplyNestedKeyValue'
             }
         };
         
@@ -25,9 +26,9 @@ describe('JsonAccessor', function () {
     });
     
     it('should return key value when key exists in object', function (done) {
-        var result = jsonAccessor.getPropertyValue(testObject, "nestedKey.deeplyNestedKey");
+        var result = jsonAccessor.getPropertyValue(testObject, 'nestedKey.deeplyNestedKey');
 
-        expect(result).toBe(testObject.nestedKey.deeplyNestedKey)
+        expect(result).toBe(testObject.nestedKey.deeplyNestedKey);
 
         done();
     });

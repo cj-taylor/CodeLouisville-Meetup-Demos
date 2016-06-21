@@ -1,6 +1,7 @@
 var expect = require('expect'),
-    TrackOperations = require('../../src/Treehouse/TrackOperations'),
-    JsonAccessor = require('../../src/JsonAccessor');
+    TrackOperations = require('../../src/Treehouse/TrackOperations');
+
+const { describe, it, beforeEach } = require('mocha');
 
 describe('Treehouse', function () {
 
@@ -9,19 +10,18 @@ describe('Treehouse', function () {
 
         beforeEach(function (done) {
             TrackOperations = require('../../src/Treehouse/TrackOperations');
-            JsonAccessor = require('../../src/JsonAccessor');
 
             testObject = {
                 trackId: 1, 
                 track: {
                     data: {
-                        name: "Test Track",
-                        estimate: "2 hours"
+                        name: 'Test Track',
+                        estimate: '2 hours'
                     }
                 },
                 pathsToData: {
-                    estimate: "data.estimate",
-                    trackName: "data.name"
+                    estimate: 'data.estimate',
+                    trackName: 'data.name'
                 }
             };            
             done();
