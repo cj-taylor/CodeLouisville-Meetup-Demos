@@ -50,3 +50,11 @@ Manually checking Treehouse for updates to the course can be tedious and time co
 { id: 18, name: 'Building a MEAN Application ', estimate: '2 hours' }
 { id: 19, name: 'JavaScript Unit Testing', estimate: '3 hours' }
 ```
+
+## References to cool things used in here
+- Npm postinstall symlink to abstract away relative module path nuances 
+    - https://gist.github.com/branneman/8048520#1-the-symlink
+- Npm test scripts + coveralls 
+    - https://strongloop.com/strongblog/npm-modules-travis-coveralls/
+- Run npm scripts in a git pre-commit Hook
+    - http://elijahmanor.com/npm-precommit-scripts/
