@@ -1,5 +1,5 @@
 var expect = require('expect'),
-    TrackOperations = require('../../src/Treehouse/TrackOperations');
+    TrackOperations = require('src/Treehouse/TrackOperations');
 
 const { describe, it, beforeEach } = require('mocha');
 
@@ -9,7 +9,7 @@ describe('Treehouse', function () {
         var testObject;
 
         beforeEach(function (done) {
-            TrackOperations = require('../../src/Treehouse/TrackOperations');
+            TrackOperations = require('src/Treehouse/TrackOperations');
 
             testObject = {
                 trackId: 1, 

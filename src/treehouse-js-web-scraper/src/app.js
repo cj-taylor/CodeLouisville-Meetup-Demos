@@ -1,5 +1,5 @@
 var sjs = require('scraperjs'),
-    TrackOperations = require('./Treehouse/TrackOperations');
+    TrackOperations = require('src/Treehouse/TrackOperations');
 
 var options = {
     track: {

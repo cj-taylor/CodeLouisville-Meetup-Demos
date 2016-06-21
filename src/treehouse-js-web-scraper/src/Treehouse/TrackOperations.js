@@ -1,4 +1,4 @@
-var jsonAccessor = require('../utils//JsonAccessor');
+var jsonAccessor = require('src/utils//JsonAccessor');
 
 exports.getTrackMetadata = function (index, trackObject, pathsToData) {
     var estimate = _getEstimate(trackObject, pathsToData);
