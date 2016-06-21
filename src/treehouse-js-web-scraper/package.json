@@ -14,7 +14,7 @@
     "test": "npm run test-mocha",
     "run": "node src/app.js",
     "test-mocha": "mocha --recursive ./test/",
-    "test-travis" : "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
+    "test-travis" : "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R nyan ./test/*",
     "lint" : "eslint ./ --cache --ignore-pattern .gitignore",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "postinstall" : "node -e \"var s='../src',d='node_modules/src',fs=require('fs');fs.exists(d,function(e){e||fs.symlinkSync(s,d,'dir')});\""
