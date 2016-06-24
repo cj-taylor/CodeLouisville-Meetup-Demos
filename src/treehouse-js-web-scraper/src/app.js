@@ -24,7 +24,7 @@ var pathsToData = {
 
 function log(results) {
     for (var i = 0; i < results.length; i++) {
-        console.log(results[i]); // eslint-disable-line no-use-before-define
+        console.log(results[i]); // eslint-disable-line no-console
     }
 }
 
