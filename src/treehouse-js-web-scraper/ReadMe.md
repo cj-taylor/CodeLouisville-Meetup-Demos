@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/cj-taylor/CodeLouisville-Meetup-Demos.svg?branch=master)](https://travis-ci.org/cj-taylor/CodeLouisville-Meetup-Demos)[![Coverage Status](https://coveralls.io/repos/github/cj-taylor/CodeLouisville-Meetup-Demos/badge.svg?branch=master)](https://coveralls.io/github/cj-taylor/CodeLouisville-Meetup-Demos?branch=master)
 
 ## Description 
-Manually checking Treehouse for updates to the course can be tedious and time consuming so let's automate that with web scraping!
+Manually checking Treehouse for updates to the course can be tedious and time consuming so let's automate that with web scraping! (Plus an entry point to unit testing!)
 
 ## Dependencies
 - Node install 
@@ -16,6 +16,12 @@ Manually checking Treehouse for updates to the course can be tedious and time co
 - `cd treehouse-js-web-scraper`
 - `npm install`
 - `npm run-script run`
+
+## Running the unit tests 
+- via terminal/cmd
+- `cd treehouse-js-web-scraper`
+- `npm run test`
+- **NOTE:** tests live in [`src/treehouse-js-web-scraper/test`](https://github.com/cj-taylor/CodeLouisville-Meetup-Demos/tree/master/src/treehouse-js-web-scraper/test)
 
 ## Debugging this 
 - `cd js-web-scraper` 
